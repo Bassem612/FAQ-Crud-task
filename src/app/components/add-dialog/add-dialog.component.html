@@ -1,0 +1,58 @@
+<div mat-dialog-content > 
+    <p *ngIf="!data.id" translate> addDialog.addQuestion </p>
+    <p *ngIf="data.id" translate> addDialog.editQuestion </p>
+
+    <form [formGroup]="addFaqForm" (submit)="submit()">
+        <mat-form-field>
+            <mat-label translate>addDialog.questionByEnglish</mat-label>
+            <input matInput formControlName="questionByEnglish">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label translate>addDialog.answerByEnglish</mat-label>
+            <input matInput formControlName="answerByEnglish">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label translate>addDialog.categoryByEnglish</mat-label>
+            <input matInput formControlName="categoryByEnglish">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label translate>addDialog.questionByArabic</mat-label>
+            <input matInput formControlName="questionByArabic">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label translate>addDialog.answerByArabic</mat-label>
+            <input matInput formControlName="answerByArabic">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label translate>addDialog.categoryByArabic</mat-label>
+            <input matInput formControlName="categoryByArabic">
+        </mat-form-field>
+
+        <div mat-dialog-actions>
+            <button translate class="btn btn-secondary" type="button" (click)="onNoClick()">addDialog.cancel</button>
+            <button
+                *ngIf="addOrEditCaption === 'Add'"
+                translate
+                class="btn btn-success ms-2" 
+                type="submit"
+                [disabled]="!addFaqForm.valid || allowEdit"
+            >   
+                addDialog.add
+             </button>
+
+            <button
+                *ngIf="addOrEditCaption === 'Edit'"
+                class="btn btn-success ms-2" 
+                type="submit"
+                [disabled]="!addFaqForm.valid || allowEdit"
+            >   
+                {{'addDialog.edit' | translate}}
+          </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+{
+    "navbar": {
+        "arabic": "Arabic",
+        "english": "English",
+        "viewWebsite": "View Website",
+        "viewAdmin": "View Admin"
+    },
+    "admin":{
+        "addFaq": "Add FAQ",
+        "search": "Search",
+        "hide": "Hide",
+        "show": "Show",
+        "edit": "Edit",
+        "delete": "Delete",
+        "question": "Question",
+        "answer": "Answer",
+        "categoryName": "Category Name",
+        "actions": "Actions"
+    },
+    "website": {
+        "filterByCategory": "Filter by category"
+    },
+    "addDialog": {
+        "addQuestion": "Add question",
+        "editQuestion": "Edit question",
+        "questionByEnglish": "Question by English",
+        "answerByEnglish": "Answer by English",
+        "categoryByEnglish": "Category Name by English",
+        "questionByArabic": "Question by Arabic",
+        "answerByArabic": "Answer by Arabic",
+        "categoryByArabic": "Category Name by Arabic",
+        "add": "Add",
+        "edit": "Edit",
+        "cancel": "Cancel"
+    }
+}

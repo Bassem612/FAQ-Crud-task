@@ -1,0 +1,37 @@
+{
+    "navbar": {
+        "arabic": "العربية",
+        "english": "الانجلزية",
+        "viewWebsite": "عرض الموقع",
+        "viewAdmin": "عرض لوحةالتحكم"
+    },
+
+    "admin":{
+        "addFaq": "اضافة سؤال",
+        "search": "بحث",
+        "hide": "اخفاء",
+        "show": "عرض",
+        "edit": "تعديل",
+        "delete": "مسح",
+        "question": "سؤال",
+        "answer": "اجابة",
+        "categoryName": "اسم الفئة",
+        "actions": "الاجراءات"
+    },
+    "website": {
+        "filterByCategory": "تصفية بالفئة"
+    },
+    "addDialog": {
+        "addQuestion": "اضافة سؤال",
+        "editQuestion": "تعديل سؤال",
+        "questionByEnglish": "سؤال بالانجليزية",
+        "answerByEnglish": "اجابة بالانجليزية",
+        "categoryByEnglish": "اسم الفئة بالانجليزية",
+        "questionByArabic": "سؤال بالعربية",
+        "answerByArabic": "اجابة بالعربية",
+        "categoryByArabic": "اسم الفئة بالعربية",
+        "add": "اضافة",
+        "edit": "تعديل",
+        "cancel": "الغاء"
+    }
+}

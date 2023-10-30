@@ -1,0 +1,24 @@
+<h2 translate class="ms-1 mb-1"> website.filterByCategory </h2>
+
+<div class="d-flex mb-3">
+  <button 
+  *ngFor="let cat of filteredCategories"
+  (click)="flitereByCategory(cat)"
+  class="btn btn-primary ms-1"> {{cat}} </button>
+</div>
+
+<mat-accordion>
+    <mat-expansion-panel 
+        [expanded]="step === i"
+        (opened)="setStep(i)"
+        *ngFor="let faq of filteredFaqs; let i = index"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ currentLang === 'en' ?  faq.questionByEnglish : faq.questionByArabic}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{currentLang === 'en' ? faq.answerByEnglish : faq.answerByArabic}}</p>
+    </mat-expansion-panel>
+</mat-accordion>
+  
