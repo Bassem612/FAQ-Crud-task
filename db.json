@@ -1,0 +1,54 @@
+{
+  "faq": [
+    {
+      "questionByEnglish": "question1",
+      "answerByEnglish": "answer1",
+      "categoryByEnglish": "category1",
+      "questionByArabic": "السؤال الاول",
+      "answerByArabic": "الاجابة الاولي",
+      "categoryByArabic": "الفئة الاولي",
+      "isShown": true,
+      "id": 1
+    },
+    {
+      "questionByEnglish": "question2",
+      "answerByEnglish": "answer2",
+      "categoryByEnglish": "category1",
+      "questionByArabic": "السؤال الثاني",
+      "answerByArabic": "الاجابة الثانية",
+      "categoryByArabic": "الفئة الثانية",
+      "isShown": true,
+      "id": 2
+    },
+    {
+      "questionByEnglish": "question3",
+      "answerByEnglish": "answer3",
+      "categoryByEnglish": "category3",
+      "questionByArabic": "ألسؤال الثالث",
+      "answerByArabic": "الاجابة الثالثة",
+      "categoryByArabic": "الفئة الثالثة",
+      "isShown": true,
+      "id": 3
+    },
+    {
+      "questionByEnglish": "question4",
+      "answerByEnglish": "answer4",
+      "categoryByEnglish": "category2",
+      "questionByArabic": "السؤال الرابع",
+      "answerByArabic": "الاجابة الرابعة",
+      "categoryByArabic": "الفئة الرابعة",
+      "isShown": true,
+      "id": 4
+    },
+    {
+      "questionByEnglish": "question5",
+      "answerByEnglish": "answer5",
+      "categoryByEnglish": "category2",
+      "questionByArabic": "السؤال الخامس",
+      "answerByArabic": "الاجابة الخامس",
+      "categoryByArabic": "الفئة الخامسة",
+      "isShown": true,
+      "id": 5
+    }
+  ]
+}

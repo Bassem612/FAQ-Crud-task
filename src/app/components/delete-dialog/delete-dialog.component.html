@@ -1,0 +1,18 @@
+<h1 mat-dialog-title> {{'admin.deleteDialogTitle' | translate}} </h1>
+<div mat-dialog-content>
+  {{'admin.deleteDialogParagraph' | translate}}
+</div>
+<div mat-dialog-actions>
+  <button 
+    mat-button mat-dialog-close
+    (click)="closeDialog()"
+  >
+    {{'admin.no' | translate}}
+</button>
+  <button 
+    mat-button mat-dialog-close cdkFocusInitial
+    (click)="deleteFaq()"
+  >
+  {{'admin.yes' | translate}}
+</button>
+</div>

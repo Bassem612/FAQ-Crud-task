@@ -1,0 +1,79 @@
+<mat-form-field>
+  <mat-label translate>admin.search</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+</mat-form-field>
+
+<button 
+    translate
+    class="btn btn-success mb-2 rounded-0 mx-2"
+    (click)="addFaqDialog()"
+  >admin.addFaq</button>
+
+<div class="mat-elevation-z8"> 
+  <table mat-table [dataSource]="faqs" matSort>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="question">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'admin.question' | translate}} </th>
+      <td mat-cell *matCellDef="let row"> {{ row.question}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="answer">      
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'admin.answer' | translate}} </th>
+      <td mat-cell *matCellDef="let row"> {{  row.answer }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'admin.categoryName' | translate}} </th>
+      <td mat-cell *matCellDef="let row"> {{row.category}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> {{'admin.actions' | translate}} </th>
+      <td mat-cell *matCellDef="let row">
+        <button 
+          *ngIf="row.isShown"
+          translate
+          class="btn btn-sm btn-primary mx-1"
+          (click)="toggleShowHide(row)"
+        >
+         admin.hide
+      </button>
+      <button 
+      *ngIf="!row.isShown"
+        translate
+        class="btn btn-sm btn-primary mx-1"
+        (click)="toggleShowHide(row)"
+      >
+      admin.show
+      </button>
+        <button 
+          translate
+          class="btn btn-sm btn-success mx-1"
+          (click)="addFaqDialog(row.id)"
+          >admin.edit</button>
+        <button
+        translate
+          class="btn btn-sm btn-danger mx-1"
+          (click)="openDeleteDialog(row.id)"
+       >admin.delete</button>
+    </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td  class="mat-cell text-white" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>
+
+
+  

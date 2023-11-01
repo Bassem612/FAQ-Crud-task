@@ -1,0 +1,46 @@
+{
+    "navbar": {
+        "arabic": "Arabic",
+        "english": "English",
+        "viewWebsite": "View Website",
+        "viewAdmin": "View Admin"
+    },
+    "admin":{
+        "addFaq": "Add FAQ",
+        "search": "Search",
+        "hide": "Hide",
+        "show": "Show",
+        "edit": "Edit",
+        "delete": "Delete",
+        "id": "Id",
+        "question": "Question",
+        "answer": "Answer",
+        "categoryName": "Category Name",
+        "actions": "Actions",
+        "itemsByPage": "Items by page",
+        "addSnackbar": "FAQ has been added successfully!",
+        "editSnackbar": "FAQ has been edited successfully!",
+        "deleteSnackbar": "FAQ has been deleted successfully!",
+        "deleteDialogTitle": "Delete FAQ",
+        "deleteDialogParagraph": "Would you like to delete this question?",
+        "yes": "Yes",
+        "no": "No"        
+
+    },
+    "website": {
+        "filterByCategory": "Filter by category"
+    },
+    "addDialog": {
+        "addQuestion": "Add question",
+        "editQuestion": "Edit question",
+        "questionByEnglish": "Question by English",
+        "answerByEnglish": "Answer by English",
+        "categoryByEnglish": "Category Name by English",
+        "questionByArabic": "Question by Arabic",
+        "answerByArabic": "Answer by Arabic",
+        "categoryByArabic": "Category Name by Arabic",
+        "add": "Add",
+        "edit": "Edit",
+        "cancel": "Cancel"
+    }
+}

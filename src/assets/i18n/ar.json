@@ -1,0 +1,46 @@
+{
+    "navbar": {
+        "arabic": "العربية",
+        "english": "الانجليزية",
+        "viewWebsite": "عرض الموقع",
+        "viewAdmin": "عرض لوحةالتحكم"
+    },
+
+    "admin":{
+        "addFaq": "اضافة سؤال",
+        "search": "بحث",
+        "hide": "اخفاء",
+        "show": "عرض",
+        "edit": "تعديل",
+        "delete": "مسح",
+        "id": "رقم تعريفي",
+        "question": "سؤال",
+        "answer": "اجابة",
+        "categoryName": "اسم الفئة",
+        "actions": "الاجراءات",
+        "itemsByPage": "العناصر لكل صفحة",
+        "addSnackbar": "تم اضافة سؤال بنجاح",
+        "editSnackbar": "تم تعديل السؤال بنجاح",
+        "deleteSnackbar": "تم مسح السؤال بنجاح",
+        "deleteDialogTitle": "مسح سؤال",
+        "deleteDialogParagraph": "هل تريد مسح هذا السؤال",
+        "yes": "نعم",
+        "no": "لا"     
+    },
+    "website": {
+        "filterByCategory": "تصفية بالفئة"
+    },
+    "addDialog": {
+        "addQuestion": "اضافة سؤال",
+        "editQuestion": "تعديل سؤال",
+        "questionByEnglish": "سؤال بالانجليزية",
+        "answerByEnglish": "اجابة بالانجليزية",
+        "categoryByEnglish": "اسم الفئة بالانجليزية",
+        "questionByArabic": "سؤال بالعربية",
+        "answerByArabic": "اجابة بالعربية",
+        "categoryByArabic": "اسم الفئة بالعربية",
+        "add": "اضافة",
+        "edit": "تعديل",
+        "cancel": "الغاء"
+    }
+}
