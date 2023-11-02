@@ -140,7 +140,6 @@ export class AddDialogComponent implements OnInit {
         return false;
       }
     }
-
     return true;
   }
 
