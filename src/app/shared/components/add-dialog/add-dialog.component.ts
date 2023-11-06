@@ -5,9 +5,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule, NgIf } from '@angular/common';
-import { FaqService } from 'src/app/shared/faq.service';
+import { FaqService } from 'src/app/shared/services/faq.service';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarModule, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
-import { Faq } from 'src/app/shared/interfaces/faq.interface';
+import { Faq } from 'src/app/features/faq/models/faq.interface';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslateService } from '@ngx-translate/core';
 

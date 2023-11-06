@@ -1,15 +1,15 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FaqService } from 'src/app/shared/faq.service';
-import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component';
-import { Faq } from 'src/app/shared/interfaces/faq.interface';
+import { FaqService } from 'src/app/shared/services/faq.service';
+import { DeleteDialogComponent } from '../../../../shared/components/delete-dialog/delete-dialog.component';
+import { Faq } from 'src/app/features/faq/models/faq.interface';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
-import { AddDialogComponent } from '../add-dialog/add-dialog.component';
+import { AddDialogComponent } from '../../../../shared/components/add-dialog/add-dialog.component';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
@@ -28,11 +28,11 @@ import { CommonModule } from '@angular/common';
     TranslateModule, 
     CommonModule
   ],
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  selector: 'app-faq',
+  templateUrl: './faq.component.html',
+  styleUrls: ['./faq.component.scss']
 })
-export class AdminComponent implements OnInit {
+export class FaqComponent implements OnInit {
   faqs!: MatTableDataSource<Faq>;
   currentLang: string = 'en';
 
@@ -42,11 +42,13 @@ export class AdminComponent implements OnInit {
   constructor(
     private faqService: FaqService,
     public dialog: MatDialog,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    public _MatPaginatorIntl: MatPaginatorIntl
     ) { 
       this.translateService.setDefaultLang('en');
       this.translateService.onLangChange.subscribe(data => {
         this.currentLang = data.lang;
+        this.getFaqs();
       });      
     }
 
@@ -56,10 +58,20 @@ export class AdminComponent implements OnInit {
 
   private getFaqs() {
     this.faqService.getFaqs().subscribe((data: any) => {
-      this.faqs = new MatTableDataSource(data);
+
+      let newData = data.map((el: any) => {
+        el.question = localStorage.getItem('currentLang') === 'en' ? el.questionByEnglish : el.questionByArabic;
+        el.answer = localStorage.getItem('currentLang') === 'en' ? el.answerByEnglish : el.answerByArabic;
+        el.category = localStorage.getItem('currentLang') === 'en' ? el.categoryByEnglish : el.categoryByArabic;
+        return {...el} ;
+      });      
+
+      this.faqs = new MatTableDataSource(newData);
       this.faqs.paginator = this.paginator;
-      this.faqs.sort = this.sort;
+      this.faqs.sort = this.sort;  
+      this._MatPaginatorIntl.itemsPerPageLabel = localStorage.getItem('currentLang') === 'en' ? 'Items per page' : 'العناصر لكل صفحة';    
     });
+
   }
 
   toggleShowHide(element: Faq) {
@@ -70,8 +82,6 @@ export class AdminComponent implements OnInit {
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    console.log(filterValue);
-
     this.faqs.filter = filterValue.trim().toLowerCase();
 
     if (this.faqs.paginator) {
@@ -106,5 +116,5 @@ export class AdminComponent implements OnInit {
   }
 
 
-  displayedColumns: string[] = ['id', 'question', 'answer', 'category name', 'actions'];
+  displayedColumns: string[] = ['id', 'question', 'answer', 'category', 'actions'];
 }

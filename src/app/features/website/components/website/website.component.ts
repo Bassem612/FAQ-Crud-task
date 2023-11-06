@@ -1,8 +1,8 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { FaqService } from 'src/app/shared/faq.service';
-import { Faq } from 'src/app/shared/interfaces/faq.interface';
+import { FaqService } from 'src/app/shared/services/faq.service';
+import { Faq } from 'src/app/features/faq/models/faq.interface';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from "@ngx-translate/core";
 

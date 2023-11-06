@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { FaqService } from 'src/app/shared/faq.service';
+import { FaqService } from 'src/app/shared/services/faq.service';
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
